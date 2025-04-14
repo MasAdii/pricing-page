@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.spinner{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-top: 5px solid rgb(14, 82, 184);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{ transform:rotate(0deg) ; -webkit-transform:rotate(0deg) ; -moz-transform:rotate(0deg) ; -ms-transform:rotate(0deg) ; -o-transform:rotate(0deg) ; }
+    100%{ transform:rotate(360deg) ; -webkit-transform:rotate(360deg) ; -moz-transform:rotate(360deg) ; -ms-transform:rotate(360deg) ; -o-transform:rotate(360deg) ;}
+}
+
+.loading .teks{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+body{
+    background-color: black;
+}
+
+#container{
+    transition: all .55s ease-in-out;
+    display: none;
+    -webkit-transition: all .55s ease-in-out;
+    -moz-transition: all .55s ease-in-out;
+    -ms-transition: all .55s ease-in-out;
+    -o-transition: all .55s ease-in-out;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(5, 5, 116);
+    color: rgb(223, 221, 221);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav .brand{
+    font-size: 28px;
+    font-weight: 620;
+}
+
+nav .mode_malam{
+    background-color: rgb(5, 5, 116);
+    border: none;
+}
+
+nav .mode_malam i{
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    transition: all .42s ease-in;
+    -webkit-transition: all .42s ease-in;
+    -moz-transition: all .42s ease-in;
+    -ms-transition: all .42s ease-in;
+    -o-transition: all .42s ease-in;
+    margin-right: 14px;
+}
+
+nav .mode_malam i:hover{
+    cursor: pointer;
+    color: rgb(255, 230, 0);
+}
+
+.container{
+    transition: all .45s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin: 3em;
+    font-family: "Poppins", sans-serif;
+    -webkit-transition: all .45s ease-in-out;
+    -moz-transition: all .45s ease-in-out;
+    -ms-transition: all .45s ease-in-out;
+    -o-transition: all .45s ease-in-out;
+}
+
+.box{
+    box-shadow: 0 7px 17px rgba(28, 41, 82, 0.774);
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    border-radius: 3%;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+    transition: all .45s ease-in, filter .3s ease-in, opacity .3s ease-in;
+    position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: munculBox 1s ease forwards;
+    -webkit-animation: munculBox 1s ease forwards;
+    background-color: rgb(7, 30, 105);
+    color: white;
+}
+
+.box:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    background: linear-gradient(rgb(8, 40, 226) 88px, rgb(129, 184, 255) 50px);
+    box-shadow: 0 0 25px #032b4d;
+}
+
+@keyframes munculBox {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+
+.box:nth-child(1){
+    animation-delay: 0s;
+}
+
+.box:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.box:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.container:hover .box {
+    filter: blur(2px);
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+.container .box:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.07);
+    z-index: 1;
+}
+
+
+.box h2{
+    font-weight: 600;
+    font-size: 30px;
+    text-shadow: 1.4px 1.4px 1.4px rgb(255, 255, 255);
+}
+
+.spesial{
+    animation: spesial 1.3s infinite alternate ease-in-out;
+    -webkit-animation: spesial 1.3s infinite alternate ease-in-out;
+}
+
+@keyframes spesial {
+    from{
+    opacity: .3;
+}
+to{
+    opacity: 1;
+}
+}
+
+.box .harga_bulanan{
+    color: rgb(65, 156, 236);
+    font-size: 23px;
+    font-weight: 520;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+}
+
+.new-price {
+    color: #ee2031;
+    font-weight: bold;
+}
+
+.diskon{
+    animation: diskon .6s infinite;
+    -webkit-animation: diskon .6s infinite;
+}
+
+
+@keyframes diskon {
+    from{
+        opacity: .3;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    to{
+        opacity: 1;
+        transform: scale(1.09);
+        -webkit-transform: scale(1.09);
+        -moz-transform: scale(1.09);
+        -ms-transform: scale(1.09);
+        -o-transform: scale(1.09);
+}
+}
+
+.fitur h3{
+    font-weight: 560;
+}
+
+.fitur li{
+    font-weight: 475;
+    list-style-type: none;
+}
+
+.box button{
+    border: none;
+    font-size: 20px;
+    font-weight: 560;
+    background: rgb(8, 44, 165);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all .45s ease-in-out;
+    -webkit-transition: all .45s ease-in-out;
+    -moz-transition: all .45s ease-in-out;
+    -ms-transition: all .45s ease-in-out;
+    -o-transition: all .45s ease-in-out;
+}
+
+.box button:hover{
+    border: 1.4px solid rgb(10, 39, 133);
+    background: none;
+    color: rgb(11, 41, 141);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    cursor: pointer;
+}
+
+.box button:focus-visible {
+    outline: 3px dashed #2254fa;
+    outline-offset: 4px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .box{
+        padding: 2em 5em;
+    }
+
+    .box h2{
+        font-size: 34px;
+    }
+    .harga_bulanan{
+        font-size: 30px;
+    }
+    .fitur h3{
+        font-size: 25px;
+    }
+    .fitur li{
+        font-size: 23.5px;
+    }
+
+    .container:hover .box{
+        filter: none;
+        -webkit-filter: none;
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+
+    .container .box:hover{
+        transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -o-transform: scale(1.03);
+}
+}
+
+
+@media screen and (max-width: 600px){
+    .box{
+        padding: 1.5em 3.9em;
+    }
+
+    .box h2{
+        font-size: 30px;
+    }
+    .harga_bulanan{
+        font-size: 28px;
+    }
+
+    .fitur h3{
+        font-size: 22px;
+    }
+
+    .fitur li{
+        font-size: 15px;
+    }
+
+    .container:hover .box{
+        filter: none;
+        -webkit-filter: none;
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+
+    .container .box:hover{
+        transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -o-transform: scale(1.03);
+}
+}

@@ -3,61 +3,83 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="style/light.css" id="theme">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <title>Pricing Page</title>
     </head>
     <body>
-        <div class="container">
-            <div class="box">
-                <h2 style="color: rgb(104, 104, 104);">Basic</h2>
-                <div class="harga_bulanan">
-                    <strong>$10</strong>
-                    / month
-                </div>
-                <ul class="fitur">
-                    <h3>Fitur:</h3>
-                    <li>✔ 1 User</li>
-                    <li>✔ 5GB Storage</li>
-                    <li>✔ Email Support</li>
-                    <li>✖ Custom Domain</li>
-                    <li>✖ Advanced Analytics</li>
-                </ul>
-                <button>Select</button>
-            </div>
-            <div class="box">
-                <h2 style="color: red;">Pro <span class="spesial">⭐</span></h2>
-                <div class="harga_bulanan">
-                    <strong>$21</strong>
-                    / month
-                </div>
-                <ul class="fitur">
-                    <h3>Fitur:</h3>
-                    <li>✔ Up to 5 Users</li>
-                    <li>✔ 50GB Storage</li>
-                    <li>✔ Priority Email Support</li>
-                    <li>✔ Custom Domain</li>
-                    <li>✖ Advanced Analytics</li>
-                </ul>
-                <button>Select</button>
-            </div>
-            <div class="box">
-                <h2 style="color: rgb(0, 68, 255);">Premium <span class="spesial">👑</span></h2>
-                <div class="harga_bulanan diskon">
-                    <span class="old-price">$36</span>
-                    <span class="new-price">$30</span>
-                    / month
-                </div>
-                <ul class="fitur">
-                    <h3>Fitur:</h3>
-                    <li>✔ Unlimited Users</li>
-                    <li>✔ 1TB Storage</li>
-                    <li>✔ 24/7 VIP Support</li>
-                    <li>✔ Custom Domain</li>
-                    <li>✔ Advanced Analytics</li>
-                </ul>
-                <button>Select</button>
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div class="teks">
+                Bentar ya
+                <span id="titik"></span>
             </div>
         </div>
-        <script src="main.js"></script>
+        <div id="container">
+            <nav>
+                <div class="brand">
+                    AdiVerse Hosting
+                </div>
+                <button class="mode_malam" id="toggleBtn"><i class="fas fa-moon"></i></button>
+            </nav>
+            <div class="container">
+                <div class="box">
+                    <h2 style="color: rgb(104, 104, 104);">Basic</h2>
+                    <div class="harga_bulanan">
+                        <strong>$10</strong>
+                        / month
+                    </div>
+                    <ul class="fitur">
+                        <h3>Fitur:</h3>
+                        <li>✔ 1 User</li>
+                        <li>✔ 5GB Storage</li>
+                        <li>✔ Email Support</li>
+                        <li>✖ Custom Domain</li>
+                        <li>✖ Advanced Analytics</li>
+                    </ul>
+                    <button>Select</button>
+                </div>
+                <div class="box">
+                    <h2 style="color: red;">
+                        Pro
+                        <span class="spesial">⭐</span>
+                    </h2>
+                    <div class="harga_bulanan">
+                        <strong>$21</strong>
+                        / month
+                    </div>
+                    <ul class="fitur">
+                        <h3>Fitur:</h3>
+                        <li>✔ Up to 5 Users</li>
+                        <li>✔ 50GB Storage</li>
+                        <li>✔ Priority Email Support</li>
+                        <li>✔ Custom Domain</li>
+                        <li>✖ Advanced Analytics</li>
+                    </ul>
+                    <button>Select</button>
+                </div>
+                <div class="box">
+                    <h2 style="color: rgb(0, 68, 255);">
+                        Premium
+                        <span class="spesial">👑</span>
+                    </h2>
+                    <div class="harga_bulanan diskon">
+                        <span class="old-price">$36</span>
+                        <span class="new-price">$30</span>
+                        / month
+                    </div>
+                    <ul class="fitur">
+                        <h3>Fitur:</h3>
+                        <li>✔ Unlimited Users</li>
+                        <li>✔ 1TB Storage</li>
+                        <li>✔ 24/7 VIP Support</li>
+                        <li>✔ Custom Domain</li>
+                        <li>✔ Advanced Analytics</li>
+                    </ul>
+                    <button>Select</button>
+                </div>
+            </div>
+        </div>
+        <script src="js/main.js"></script>
     </body>
 </html>

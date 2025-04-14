@@ -6,7 +6,91 @@
     box-sizing: border-box;
 }
 
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(211, 211, 211);
+}
+
+.spinner{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 5px solid rgb(190, 213, 247);
+    border-top: 5px solid rgb(0, 102, 255);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{ transform:rotate(0deg) ; -webkit-transform:rotate(0deg) ; -moz-transform:rotate(0deg) ; -ms-transform:rotate(0deg) ; -o-transform:rotate(0deg) ; }
+    100%{ transform:rotate(360deg) ; -webkit-transform:rotate(360deg) ; -moz-transform:rotate(360deg) ; -ms-transform:rotate(360deg) ; -o-transform:rotate(360deg) ;}
+}
+
+.loading .teks{
+    color: rgb(6, 53, 207);
+    text-shadow: 1.5px 1.5px 1.5px rgb(0, 0, 0, 0.3);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    font-weight: 560;
+    margin: 10px 0;
+}
+
+#container{
+    display: none;
+    transition: all .55s ease-in-out;
+    -webkit-transition: all .55s ease-in-out;
+    -moz-transition: all .55s ease-in-out;
+    -ms-transition: all .55s ease-in-out;
+    -o-transition: all .55s ease-in-out;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: blue;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav .brand{
+    font-size: 28px;
+    font-weight: 620;
+}
+
+nav .mode_malam{
+    background-color: blue;
+    border: none;
+}
+
+nav .mode_malam i{
+    color: rgb(255, 238, 0);
+    font-size: 32px;
+    transition: all .42s ease-in;
+    -webkit-transition: all .42s ease-in;
+    -moz-transition: all .42s ease-in;
+    -ms-transition: all .42s ease-in;
+    -o-transition: all .42s ease-in;
+    margin-right: 14px;
+}
+
+nav .mode_malam i:hover{
+    cursor: pointer;
+    color: black;
+}
+
 .container{
+    transition: all .45s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,6 +113,10 @@
     -o-border-radius: 3%;
     transition: all .45s ease-in, filter .3s ease-in, opacity .3s ease-in;
     position: relative;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: munculBox 1s ease forwards;
+    -webkit-animation: munculBox 1s ease forwards;
 }
 
 .box:hover{
@@ -45,6 +133,29 @@
     -o-border-radius: 5%;
     background: linear-gradient(rgb(154, 169, 255) 88px, rgb(255, 255, 255) 50px);
     box-shadow: 0 0 25px rgba(0, 0, 255, 0.2);
+}
+
+@keyframes munculBox {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+}
+}
+
+.box:nth-child(1){
+    animation-delay: 0s;
+}
+
+.box:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.box:nth-child(3){
+    animation-delay: 0.6s;
 }
 
 .container:hover .box {
@@ -209,7 +320,7 @@ to{
 
 @media screen and (max-width: 600px){
     .box{
-        padding: 1.5em 5em;
+        padding: 1.5em 3.9em;
     }
 
     .box h2{
@@ -224,7 +335,7 @@ to{
     }
 
     .fitur li{
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .container:hover .box{
