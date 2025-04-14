@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+    margin: 3em;
+    font-family: "Poppins", sans-serif;
+}
+
+.box{
+    box-shadow: 0 7px 17px rgba(0,0,0,0.1);
+    padding: 2em 5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4em;
+    border-radius: 3%;
+    -webkit-border-radius: 3%;
+    -moz-border-radius: 3%;
+    -ms-border-radius: 3%;
+    -o-border-radius: 3%;
+    transition: all .45s ease-in, filter .3s ease-in, opacity .3s ease-in;
+    position: relative;
+}
+
+.box:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    -o-transform: scale(1.07);
+    border-radius: 5%;
+    -webkit-border-radius: 5%;
+    -moz-border-radius: 5%;
+    -ms-border-radius: 5%;
+    -o-border-radius: 5%;
+    background: linear-gradient(rgb(154, 169, 255) 88px, rgb(255, 255, 255) 50px);
+    box-shadow: 0 0 25px rgba(0, 0, 255, 0.2);
+}
+
+.container:hover .box {
+    filter: blur(2px);
+    opacity: 0.6;
+    transform: scale(0.98);
+}
+
+.container .box:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.07);
+    z-index: 1;
+}
+
+
+.box h2{
+    font-weight: 600;
+    font-size: 30px;
+    text-shadow: 1.4px 1.4px 1.4px rgb(34, 34, 34);
+}
+
+.spesial{
+    animation: spesial 1.3s infinite alternate ease-in-out;
+    -webkit-animation: spesial 1.3s infinite alternate ease-in-out;
+}
+
+@keyframes spesial {
+    from{
+    opacity: .3;
+}
+to{
+    opacity: 1;
+}
+}
+
+.box .harga_bulanan{
+    color: rgb(65, 156, 236);
+    font-size: 23px;
+    font-weight: 520;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-right: 5px;
+}
+
+.new-price {
+    color: #ee2031;
+    font-weight: bold;
+}
+
+.diskon{
+    animation: diskon .6s infinite;
+    -webkit-animation: diskon .6s infinite;
+}
+
+
+@keyframes diskon {
+    from{
+        opacity: .3;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    to{
+        opacity: 1;
+        transform: scale(1.09);
+        -webkit-transform: scale(1.09);
+        -moz-transform: scale(1.09);
+        -ms-transform: scale(1.09);
+        -o-transform: scale(1.09);
+}
+}
+
+.fitur h3{
+    font-weight: 560;
+}
+
+.fitur li{
+    font-weight: 475;
+    list-style-type: none;
+}
+
+.box button{
+    border: none;
+    font-size: 20px;
+    font-weight: 560;
+    background: rgb(34, 84, 250);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all .45s ease-in-out;
+    -webkit-transition: all .45s ease-in-out;
+    -moz-transition: all .45s ease-in-out;
+    -ms-transition: all .45s ease-in-out;
+    -o-transition: all .45s ease-in-out;
+}
+
+.box button:hover{
+    border: 1.4px solid rgb(34, 84, 250);
+    background: none;
+    color: rgb(34, 84, 250);
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    cursor: pointer;
+}
+
+.box button:focus-visible {
+    outline: 3px dashed #2254fa;
+    outline-offset: 4px;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+    .box{
+        padding: 2em 5em;
+    }
+
+    .box h2{
+        font-size: 34px;
+    }
+    .harga_bulanan{
+        font-size: 30px;
+    }
+    .fitur h3{
+        font-size: 25px;
+    }
+    .fitur li{
+        font-size: 23.5px;
+    }
+
+    .container:hover .box{
+        filter: none;
+        -webkit-filter: none;
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+
+    .container .box:hover{
+        transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -o-transform: scale(1.03);
+}
+}
+
+
+@media screen and (max-width: 600px){
+    .box{
+        padding: 1.5em 5em;
+    }
+
+    .box h2{
+        font-size: 30px;
+    }
+    .harga_bulanan{
+        font-size: 28px;
+    }
+
+    .fitur h3{
+        font-size: 22px;
+    }
+
+    .fitur li{
+        font-size: 20px;
+    }
+
+    .container:hover .box{
+        filter: none;
+        -webkit-filter: none;
+        opacity: 1;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+
+    .container .box:hover{
+        transform: scale(1.03);
+        -webkit-transform: scale(1.03);
+        -moz-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+        -o-transform: scale(1.03);
+}
+}
