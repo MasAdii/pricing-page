@@ -140,8 +140,17 @@ nav .mode_malam i:hover{
     -moz-border-radius: 5%;
     -ms-border-radius: 5%;
     -o-border-radius: 5%;
-    background: linear-gradient(rgb(8, 40, 226) 88px, rgb(129, 184, 255) 50px);
     box-shadow: 0 0 25px #032b4d;
+}
+
+.box:nth-child(1):hover{
+    background: linear-gradient(#A0B0B9 88px, rgb(34, 34, 34) 50px);
+}
+.box:nth-child(2):hover{
+    background: linear-gradient(#003366 88px, rgb(31, 31, 31) 50px);
+}
+.box:nth-child(3):hover{
+    background: linear-gradient(#FFD700 88px, rgb(36, 36, 36) 50px);
 }
 
 @keyframes munculBox {
