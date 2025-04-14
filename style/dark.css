@@ -150,7 +150,7 @@ nav .mode_malam i:hover{
     background: linear-gradient(#003366 88px, rgb(31, 31, 31) 50px);
 }
 .box:nth-child(3):hover{
-    background: linear-gradient(#FFD700 88px, rgb(36, 36, 36) 50px);
+    background: linear-gradient(#ffda0b 88px, rgb(36, 36, 36) 50px);
 }
 
 @keyframes munculBox {
